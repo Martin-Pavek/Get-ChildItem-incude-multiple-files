@@ -2,8 +2,8 @@
 cls
 
 $cesta = "C:\Users\DELL\Documents\ps1\include\"
-
-Get-ChildItem -Path $cesta -Include "*.txt" -Name
+$f = @() # pouzivat vzdy pouze takto !
+$f += Get-ChildItem -Path $cesta -Include "*.txt" -Name
 echo "------------------------"
 Get-ChildItem -Path $cesta -Include "*.txt", "*doc" -Name
 echo "---------------------------------------"

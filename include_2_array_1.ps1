@@ -11,7 +11,8 @@ $pole_include = @("*.txt", "*.doc", "*.bas")
 #Get-ChildItem -Path $cesta -Include "*.txt", "*doc", "*.bas" -Name
 echo "---------------------------------------"
 
-Get-ChildItem -Path $cesta -Include $pole_include -Name # takze zpracuje promennou typu pole
+$f = @() # vnutit datovej tip pole !!!
+$f += Get-ChildItem -Path $cesta -Include $pole_include -Name # takze zpracuje promennou typu pole
 
 echo "---------------------------------------"
 
